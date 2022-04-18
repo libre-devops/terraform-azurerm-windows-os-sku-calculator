@@ -3,8 +3,7 @@
 LOCATION="uksouth"
 PUBLISHER="MicrosoftWindowsServer"
 OFFER="WindowsServer"
-VERSION="Latest"
-SKU="2019-Datacenter"
+SKU="2019-Datacenter-with-Containers"
 
 ###
 
@@ -23,13 +22,23 @@ az vm image list-skus \
 --publisher ${PUBLISHER} \
 -o table > "Azure${PUBLISHER}SkuList$(date +'%d%m%Y').txt"
 
-latest=$(az vm image list --publisher ${PUBLISHER} --sku ${SKU} --all --query \
-    "[?offer=='${OFFER}'].version" -o tsv | sort -u | tail -n 1)
 
-az vm image show \
---location ${LOCATION} \
---offer ${OFFER} \
---publisher ${PUBLISHER} \
---sku ${SKU} \
---version ${latest} \
--o table > "aAzure${PUBLISHER}${OFFER}LatestValues$(date +'%d%m%Y').txt"
+if [ -n "$(az vm image list --publisher ${PUBLISHER} --sku ${SKU} --all --query \
+    "[?offer=='${OFFER}'].version" -o tsv | sort -u | tail -n 1)" ]; then
+
+    latest="$(az vm image list --publisher ${PUBLISHER} --sku ${SKU} --all --query \
+    "[?offer=='${OFFER}'].version" -o tsv | sort -u | tail -n 1)"
+
+    az vm image show \
+    --location ${LOCATION} \
+    --offer ${OFFER} \
+    --publisher ${PUBLISHER} \
+    --sku ${SKU} \
+    --version ${latest} \
+    -o table > "Azure${PUBLISHER}${OFFER}LatestValues$(date +'%d%m%Y').txt"
+
+    else
+      echo "No ${VERSION} has been found, skipping"
+fi
+
+
