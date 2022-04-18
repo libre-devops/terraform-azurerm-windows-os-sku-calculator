@@ -1,7 +1,9 @@
 # terraform-azurerm-os-calculator
 [Heavily inspired form Terraform Azure Compute Module](https://github.com/Azure/terraform-azurerm-compute)
 
-Designed to be used with Libre DevOps VM modules, and will simplify the way of getting SKUs for your VM images without having to look it up
+Designed to be used with Libre DevOps VM modules, and will simplify the way of getting SKUs for your VM images without having to look it up.
+
+Simple pass the OS you want to the variable, and it will output the values of the publisher, offer and SKU.  All versions are latest
 
 ```hcl
 module "os_calculator" {
@@ -37,6 +39,6 @@ No resources.
 
 | Name | Description |
 |------|-------------|
-| <a name="output_calculated_value_os_offer"></a> [calculated\_value\_os\_offer](#output\_calculated\_value\_os\_offer) | n/a |
-| <a name="output_calculated_value_os_publisher"></a> [calculated\_value\_os\_publisher](#output\_calculated\_value\_os\_publisher) | n/a |
-| <a name="output_calculated_value_os_sku"></a> [calculated\_value\_os\_sku](#output\_calculated\_value\_os\_sku) | n/a |
+| <a name="output_calculated_value_os_offer"></a> [calculated\_value\_os\_offer](#output\_calculated\_value\_os\_offer) | Gets the offer value |
+| <a name="output_calculated_value_os_publisher"></a> [calculated\_value\_os\_publisher](#output\_calculated\_value\_os\_publisher) | Gets the offer value |
+| <a name="output_calculated_value_os_sku"></a> [calculated\_value\_os\_sku](#output\_calculated\_value\_os\_sku) | Gets the OS value |
