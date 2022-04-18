@@ -8,7 +8,7 @@ SKU="stable"
 
 ###
 
-az vm image list \
+az vm image list --all \
 --location ${LOCATION} \
 --offer ${OFFER} \
 --publisher ${PUBLISHER} \
