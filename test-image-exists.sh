@@ -9,7 +9,7 @@ SKU="stable"
 ###
 
 az vm image list \
---location ${LOCATION}\
+--location ${LOCATION} \
 --offer ${OFFER} \
 --publisher ${PUBLISHER} \
 --sku ${SKU}
