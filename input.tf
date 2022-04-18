@@ -1,5 +1,6 @@
 variable "vm_os_simple" {
   default = ""
+  description = "If using this module, pass one of the keys as the variable to get that image properties"
 }
 
 # Definition of the standard OS with "SimpleName" = "publisher,offer,sku", this can have many more skus added to it
@@ -10,8 +11,7 @@ variable "standard_os" {
     "WindowsServer2016" = "MicrosoftWindowsServer,WindowsServer,2012-Datacenter"
     "WindowsServer2019" = "MicrosoftWindowsServer,WindowsServer,2019-Datacenter"
     "WindowsServer2022" = "MicrosoftWindowsServer,WindowsServer,2022-Datacenter"
-
-    "WindowsServerAzureEdition" = "MicrosoftWindowsServer,WindowsServer,2022-datacenter-azure-edition"
+    "WindowsServer2022AzureEdition" = "MicrosoftWindowsServer,WindowsServer,2022-datacenter-azure-edition"
 
     "WindowsServer2019WithContainers" = "MicrosoftWindowsServer,WindowsServer,2019-Datacenter-with-Containers"
 

@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+
+LOCATION="uksouth"
+PUBLISHER="MicrosoftWindowsServer"
+OFFER="WindowsServer"
+VERSION="Latest"
+SKU="2019-Datacenter"
+
+###
+
+az vm image list-publishers \
+--location ${LOCATION} \
+-o table > "AzurePublisherList$(date +'%d%m%Y').txt"
+
+az vm image list-offers \
+--location ${LOCATION} \
+--publisher ${PUBLISHER} \
+-o table > "Azure${PUBLISHER}OfferList$(date +'%d%m%Y').txt"
+
+az vm image list-skus \
+--location ${LOCATION} \
+--offer ${OFFER} \
+--publisher ${PUBLISHER} \
+-o table > "Azure${PUBLISHER}SkuList$(date +'%d%m%Y').txt"
+
+latest=$(az vm image list --publisher ${PUBLISHER} --sku ${SKU} --all --query \
+    "[?offer=='${OFFER}'].version" -o tsv | sort -u | tail -n 1)
+
+az vm image show \
+--location ${LOCATION} \
+--offer ${OFFER} \
+--publisher ${PUBLISHER} \
+--sku ${SKU} \
+--version ${latest} \
+-o table > "aAzure${PUBLISHER}${OFFER}LatestValues$(date +'%d%m%Y').txt"
