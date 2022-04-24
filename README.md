@@ -12,6 +12,9 @@ module "os_calculator" {
   vm_os_simple = "WindowsServer2019" // will give you WindowsServer2019 sku properties, to be used in windows-vm module
 }
 ```
+
+For a full example build, check out the [Libre DevOps Website](https://www.libredevops.org/quickstart/utils/terraform/using-lbdo-tf-modules-example.html)
+
 ## Requirements
 
 No requirements.
