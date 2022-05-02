@@ -7,7 +7,7 @@ Simple pass the OS you want to the variable, and it will output the values of th
 
 ```hcl
 module "os_calculator" {
-  source = "github.com/libre-devops/terraform-azurerm-win-os-sku-calculator"
+  source = "github.com/libre-devops/terraform-azurerm-windows-os-sku-calculator"
 
   vm_os_simple = "WindowsServer2019" // will give you WindowsServer2019 sku properties, to be used in windows-vm module
 }
