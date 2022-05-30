@@ -20,6 +20,8 @@ variable "standard_os" {
     "WindowsServer2019SqlServer2019WebGen2"        = "microsoftsqlserver,sql2019-ws2019,web-gen2"
     "WindowsServer2019SqlServer2019StandardGen2"   = "microsoftsqlserver,sql2019-ws2019,standard-gen2"
     "WindowsServer2019SqlServer2019EnterpriseGen2" = "microsoftsqlserver,sql2019-ws2019,enterprise-gen2"
+    "WindowsServer2022SqlServer2019Enterprise"     = "microsoftsqlserver,sql2019-ws2022,enterprise"
+    "WindowsServer2022SqlServer2019EnterpriseGen2" = "microsoftsqlserver,sql2019-ws2022,enterprise-gen2"
     "Windows10Gen2"                                = "MicrosoftWindowsDesktop,Windows-10,win10-21h2-ent-ltsc-g2"
     "Windows11Gen2"                                = "MicrosoftWindowsDesktop,Windows-11,win11-21h2-ent-g2"
     "WindowsServer2012Gen2"                        = "MicrosoftWindowsServer,WindowsServer,2012-Datacenter-gensecond"
