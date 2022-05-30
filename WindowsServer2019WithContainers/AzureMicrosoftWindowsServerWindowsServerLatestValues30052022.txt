@@ -1,0 +1,3 @@
+Architecture    HyperVGeneration    Location    Name
+--------------  ------------------  ----------  ---------------
+x64             V1                  uksouth     2019.0.20190410

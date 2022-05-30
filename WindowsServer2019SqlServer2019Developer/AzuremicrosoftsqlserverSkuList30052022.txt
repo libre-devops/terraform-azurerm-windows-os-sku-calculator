@@ -1,0 +1,13 @@
+Location    Name
+----------  ---------------------------
+uksouth     enterprise
+uksouth     enterprise-gen2
+uksouth     enterprisedbengineonly
+uksouth     enterprisedbengineonly-gen2
+uksouth     sqldev
+uksouth     sqldev-gen2
+uksouth     standard
+uksouth     standard-gen2
+uksouth     standarddbengineonly
+uksouth     web
+uksouth     web-gen2

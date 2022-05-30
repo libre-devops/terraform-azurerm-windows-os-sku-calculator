@@ -1,0 +1,3 @@
+Architecture    HyperVGeneration    Location    Name
+--------------  ------------------  ----------  ----------------
+x64             V2                  uksouth     20348.707.220505
