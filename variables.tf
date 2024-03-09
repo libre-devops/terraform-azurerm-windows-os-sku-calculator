@@ -37,5 +37,3 @@ variable "vm_os_simple" {
   default     = ""
   description = "If using this module, pass one of the keys as the variable to get that image properties"
 }
-
-# Definition of the standard OS with "SimpleName" = "publisher,offer,sku", this can have many more skus added to it
