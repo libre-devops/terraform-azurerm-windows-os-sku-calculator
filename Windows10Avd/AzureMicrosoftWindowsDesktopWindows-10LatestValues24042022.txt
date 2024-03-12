@@ -1,3 +1,0 @@
-HyperVGeneration    Location    Name
-------------------  ----------  -----------------
-V1                  uksouth     19044.1645.220403

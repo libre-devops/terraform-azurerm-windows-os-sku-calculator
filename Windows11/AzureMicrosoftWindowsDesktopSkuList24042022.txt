@@ -1,8 +1,0 @@
-Location    Name
-----------  --------------------
-uksouth     win11-21h2-avd
-uksouth     win11-21h2-ent
-uksouth     win11-21h2-entn
-uksouth     win11-21h2-pro
-uksouth     win11-21h2-pro-zh-cn
-uksouth     win11-21h2-pron
