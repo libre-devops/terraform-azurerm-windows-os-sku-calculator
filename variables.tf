@@ -10,6 +10,7 @@ variable "standard_os" {
     "WindowsServer2019"                            = "MicrosoftWindowsServer,WindowsServer,2019-Datacenter"
     "WindowsServer2019WithContainers"              = "MicrosoftWindowsServer,WindowsServer,2019-Datacenter-with-Containers"
     "WindowsServer2022"                            = "MicrosoftWindowsServer,WindowsServer,2022-Datacenter"
+    "WindowsServer2025"                            = "MicrosoftWindowsServer,WindowsServer,2025-Datacenter"
     "WindowsServer2022AzureEdition"                = "MicrosoftWindowsServer,WindowsServer,2022-datacenter-azure-edition"
     "WindowsServer2019SqlServer2019Developer"      = "microsoftsqlserver,sql2019-ws2019,sqldev"
     "WindowsServer2019SqlServer2019Web"            = "microsoftsqlserver,sql2019-ws2019,web"
@@ -29,7 +30,7 @@ variable "standard_os" {
     "WindowsServer2019Gen2"                        = "MicrosoftWindowsServer,WindowsServer,2019-Datacenter-g2"
     "WindowsServer2019WithContainersGen2"          = "MicrosoftWindowsServer,WindowsServer,2019-Datacenter-with-Containers-g2"
     "WindowsServer2022Gen2"                        = "MicrosoftWindowsServer,WindowsServer,2022-Datacenter-g2"
-
+    "WindowsServer2025Gen2"                        = "MicrosoftWindowsServer,WindowsServer,2025-Datacenter-g2"
   }
 }
 
